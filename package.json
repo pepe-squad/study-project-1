@@ -13,8 +13,8 @@
     "lint:fix": "eslint --fix --ext .jsx --ext .js src/**/*",
     "prettier": "prettier './src/**/*.js' './src/**/*.jsx' --write --no-error-on-unmatched-pattern",
     "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js --progress --profile",
-    "fix": "npm run-s prettier lint:fix",
-    "checks": "npm run-s prettier lint build",
+    "fix": "run-s prettier lint:fix",
+    "checks": "run-s prettier lint build",
     "prepare": "husky install"
   },
   "dependencies": {
