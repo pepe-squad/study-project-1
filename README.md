@@ -16,7 +16,7 @@ npm install
 
 Run a project in development mode
 ```
-npm run dev
+npm run start
 ```
 
 Build a project
