@@ -1,43 +1,25 @@
-# MERN boilerplate
-Client/Server boilerplate for pet-projects
-
+# Study Project #1
 ## What’s included?
 - React
-- Redux
 - TailwindCSS
 - ESLint
 - Webpack
-- ExpressJS
-- Socket.IO`*`
-- Mongoose`*`
-
-`*`*Connected via environment variables.*
 
 ## Notice
-Minimum supported `Node.js` version is `12.13.0`
+Minimum supported `Node.js` version is `16.0.0`
 
 ## How to use it?
 Install modules
 ```
-yarn install
+npm install
 ```
 
 Run a project in development mode
 ```
-yarn run dev
-```
-
-Run server only
-```
-yarn run watch:server
-```
-
-Run client only
-```
-yarn run watch:client
+npm run dev
 ```
 
 Build a project
 ```
-yarn run build
+npm run build
 ```

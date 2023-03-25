@@ -1,0 +1,8 @@
+{
+  "_consts": "src/consts",
+  "_components": "src/components",
+  "_hooks": "src/hooks",
+  "_pages": "src/pages",
+  "_utils": "src/utils",
+  "_app": "src/app"
+}

@@ -1,10 +1,11 @@
-require('dotenv').config()
+import * as dotenv from 'dotenv';
+import { merge } from 'webpack-merge';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
 
-const { merge } = require('webpack-merge')
-const common = require('./webpack.common.js')
+import common from './webpack.common.js';
 
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const TerserPlugin = require('terser-webpack-plugin')
+dotenv.config();
 
 const config = {
   mode: 'production',
@@ -26,13 +27,13 @@ const config = {
           preset: [
             'default',
             {
-              discardComments: { removeAll: true },
-            },
-          ],
-        },
-      }),
-    ],
-  },
-}
+              discardComments: { removeAll: true }
+            }
+          ]
+        }
+      })
+    ]
+  }
+};
 
-module.exports = merge(common, config)
+export default merge(common, config);

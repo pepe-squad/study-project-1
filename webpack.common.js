@@ -1,100 +1,82 @@
-require('dotenv').config()
+import * as dotenv from 'dotenv';
+import { resolve } from 'path';
+import ESLintPlugin from 'eslint-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import webpack from 'webpack';
 
-const { resolve } = require('path')
+import alias from './alias.json' assert { type: 'json' };
 
-const ESLintPlugin = require('eslint-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const { DefinePlugin } = require('webpack')
+dotenv.config();
 
-const { SOCKETS_ENABLE } = process.env
+const { SOCKETS_ENABLE } = process.env;
+
+const setAlias = (aliasList) => {
+    return Object.entries(aliasList).reduce((acc, [key, value]) => {
+        return {
+            ...acc,
+            [key]: resolve(process.cwd(), value)
+        };
+    }, {});
+};
 
 const config = {
-  entry: './client/main.jsx',
-  resolve: {
-    extensions: ['.js', '.jsx', '.json'],
-  },
-  output: {
-    filename: 'assets/js/[name].bundle.js',
-    path: resolve(__dirname, 'dist'),
-    publicPath: '/'
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/i,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      },
-      {
-        test: /\.(sa|sc|c)ss$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              url: false,
-              importLoaders: 1,
-              sourceMap: true
+    entry: './src/bootstrap.jsx',
+    devtool: 'source-map',
+    resolve: {
+        alias: setAlias(alias),
+        extensions: ['.js', '.jsx', '.json']
+    },
+    output: {
+        filename: 'assets/js/[name].bundle.js',
+        path: resolve(process.cwd(), 'dist'),
+        publicPath: 'auto'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/i,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
+            {
+                test: /\.(sa|sc|c)ss$/i,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: false,
+                            importLoaders: 1,
+                            sourceMap: true
+                        }
+                    },
+                    'postcss-loader',
+                    'sass-loader'
+                ]
             }
-          },
-          'postcss-loader',
-          'sass-loader'
         ]
-      },
+    },
+    plugins: [
+        new ESLintPlugin({
+            extensions: ['js', 'jsx'],
+            exclude: 'node_modules'
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'assets/css/style.css'
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/index.html'
+        }),
+        new webpack.DefinePlugin({
+            SOCKETS_ENABLE: SOCKETS_ENABLE === 'true'
+        })
     ]
-  },
-  plugins: [
-    new ESLintPlugin({
-      extensions: ['js', 'jsx'],
-      exclude: 'node_modules'
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'assets/css/style.css'
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: 'client/index.html',
-      favicon: 'server/public/favicon.ico'
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'client/html.js',
-          to: '[name][ext]'
-        },
-        {
-          from: 'client/assets/images',
-          to: 'assets/images',
-          noErrorOnMissing: true,
-          globOptions: {
-            dot: true,
-            ignore: ['**/.gitkeep']
-          }
-        },
-        {
-          from: 'client/assets/fonts',
-          to: 'assets/fonts',
-          noErrorOnMissing: true,
-          globOptions: {
-            dot: true,
-            ignore: ['**/.gitkeep']
-          }
-        },
-      ]
-    }),
-    new CleanWebpackPlugin(),
-    new DefinePlugin({
-      SOCKETS_ENABLE: SOCKETS_ENABLE === 'true'
-    })
-  ]
-}
+};
 
-module.exports = config
+export default config;
