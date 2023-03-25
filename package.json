@@ -6,7 +6,6 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "init": "npm i",
     "start": "npm run watch:client",
     "watch:client": "webpack serve --config webpack.dev.js",
     "lint": "eslint --ext .jsx --ext .js src/**/*",
