@@ -1,4 +1,6 @@
 # Study Project #1
+Fisting is 300 bucks
+
 ## What’s included?
 - React
 - TailwindCSS
