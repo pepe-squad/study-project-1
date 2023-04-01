@@ -28,6 +28,7 @@ npm run start
 ```
 
 Build a project
+g
 
 ```
 npm run build
