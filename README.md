@@ -1,5 +1,7 @@
 # Study Project #1
 
+This is study project 1
+
 ## What’s included?
 
 - React
