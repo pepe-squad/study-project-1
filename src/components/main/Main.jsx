@@ -1,13 +1,16 @@
 import React from 'react';
 
-import Head from '../head/Head';
+import Head from '_components/head/Head';
+import Header from '_components/header/Header';
+import Form from '_components/form/Form';
 
 const Main = () => {
   return (
-    <div className="flex justify-center p-4 bg-slate-300">
+    <>
       <Head title="Main" />
-      <div className="flex font-semibold text-slate-800">Pepe Squad Project</div>
-    </div>
+      <Header />
+      <Form />
+    </>
   );
 };
 
