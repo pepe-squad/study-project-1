@@ -32,3 +32,9 @@ Build a project
 ```
 npm run build
 ```
+
+Check your code before push
+
+```
+npm run checks
+```
