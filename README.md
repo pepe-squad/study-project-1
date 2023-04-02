@@ -1,6 +1,6 @@
 # Study Project #1
 
-My name is VAN
+This is study project 1
 
 ## What’s included?
 
@@ -28,8 +28,13 @@ npm run start
 ```
 
 Build a project
-g
 
 ```
 npm run build
+```
+
+Check your code before push
+
+```
+npm run checks
 ```
