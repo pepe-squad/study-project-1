@@ -1,6 +1,10 @@
 # Study Project #1
 
+<<<<<<< HEAD
 My name is VAN
+=======
+This is study project 1
+>>>>>>> master
 
 ## What’s included?
 
@@ -28,8 +32,17 @@ npm run start
 ```
 
 Build a project
+<<<<<<< HEAD
 g
+=======
+>>>>>>> master
 
 ```
 npm run build
+```
+
+Check your code before push
+
+```
+npm run checks
 ```

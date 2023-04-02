@@ -1,16 +1,16 @@
 {
-    "compilerOptions": {
-        "target": "es2017",
-        "allowSyntheticDefaultImports": false,
-        "baseUrl": "./",
-        "paths": {
-            "_consts/*": ["src/consts/*"],
-            "_components/*": ["src/components/*"],
-            "_hooks/*": ["src/hooks/*"],
-            "_pages/*": ["src/pages/*"],
-            "_utils/*": ["src/utils/*"],
-            "_app/*": ["src/app/*"]
-        }
-    },
-    "exclude": ["node_modules"]
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "_consts/*": ["src/consts/*"],
+      "_components/*": ["src/components/*"],
+      "_hooks/*": ["src/hooks/*"],
+      "_pages/*": ["src/pages/*"],
+      "_utils/*": ["src/utils/*"],
+      "_app/*": ["src/app/*"]
+    }
+  },
+  "exclude": ["node_modules"]
 }
