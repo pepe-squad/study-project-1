@@ -8,14 +8,10 @@ const Main = () => {
   return (
     <>
       <Head title="Main" />
-<<<<<<< HEAD
-      <div className="flex font-semibold text-slate-800">Van project</div>
-    </div>
-=======
       <Header />
       <Form />
+      <Footer />
     </>
->>>>>>> master
   );
 };
 
