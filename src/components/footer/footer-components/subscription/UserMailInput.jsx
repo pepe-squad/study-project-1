@@ -5,7 +5,7 @@ const UserMailInput = () => {
 
   const onChangeHandler = ({ target }) => {
     const { value } = target;
-    const cutValue = value.slice(0, 15);
+    const cutValue = value.slice(0, 25);
     setName(cutValue);
   };
 
