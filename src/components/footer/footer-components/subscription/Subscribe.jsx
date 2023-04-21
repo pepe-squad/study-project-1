@@ -6,7 +6,7 @@ const Subscribe = () => {
   return (
     <div>
       <form>
-        <label htmlFor="your-email" className="pr-2">
+        <label htmlFor="usermail" className="pr-2">
           Your email:
         </label>
         <UserMailInput />
