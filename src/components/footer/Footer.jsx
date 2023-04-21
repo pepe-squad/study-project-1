@@ -1,8 +1,8 @@
 import React from 'react';
 
-import CopyRight from './footer-components/CopyRight';
-import Pages from './footer-components/Pages';
-import Subscribe from './footer-components/subscription/Subscribe';
+import CopyRight from './components/CopyRight';
+import Pages from './components/NavBar';
+import Subscribe from './components/subscription/Subscribe';
 
 const Footer = () => {
   return (
