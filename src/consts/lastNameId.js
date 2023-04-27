@@ -1,3 +1,3 @@
-const inputLastNameId = 'your-lastname';
+const inputNameId = 'your-Lastname';
 
-export default inputLastNameId;
+export default inputNameId;
