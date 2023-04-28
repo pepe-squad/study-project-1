@@ -7,6 +7,7 @@ const About = () => {
     <Layout title="About">
       <h1 className="text-2xl">About</h1>
       <div>Hello! This is About page!</div>
+      <div>Welcome to the club, buddy.</div>
     </Layout>
   );
 };
