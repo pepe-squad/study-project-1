@@ -15,7 +15,7 @@ const InputDate = () => {
     <input
       type="date"
       id={InputDateId}
-      className="rounded-md shadow-md border "
+      className="pl-14 pr-12 rounded-md shadow-md border "
       onChange={onChangeHandler}
       value={date}
     />

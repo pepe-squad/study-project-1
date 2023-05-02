@@ -13,13 +13,13 @@ const Form = () => {
   return (
     <main className="p-2">
       <form>
-        <label htmlFor={inputNameId} className="pr-2">
+        <label htmlFor={inputNameId} className="pr-6">
           Firstname:
         </label>
         <NameInput />
       </form>
       <form>
-        <label htmlFor={inputlastNameId} className="pr-2">
+        <label htmlFor={inputlastNameId} className="pr-7">
           Lastname:
         </label>
         <LastNameInput />
@@ -31,13 +31,13 @@ const Form = () => {
         <MiddleNameInput />
       </form>
       <form>
-        <label htmlFor={inputDateId} className="pr-2">
+        <label htmlFor={inputDateId} className="pr-6">
           Birth Date:
         </label>
         <InputDate />
       </form>
       <form>
-        <button type="button" className="pr-2 rounded-md shadow-md border border-rose-600 border-4">
+        <button type="button" className="text-white px-7 bg-slate-800 hover:bg-slate-500">
           Send
         </button>
       </form>
