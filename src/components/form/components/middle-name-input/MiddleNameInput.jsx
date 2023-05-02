@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import inputMiddleNameId from '_consts/middleNameId';
+import inputMiddleNameId from '_components/form/consts/middleNameId';
 
 const MiddleNameinput = () => {
   const [middlename, setMiddleName] = useState('');
@@ -12,7 +12,12 @@ const MiddleNameinput = () => {
   };
 
   return (
-    <input id={inputMiddleNameId} className="rounded-md shadow-md border" onChange={onChangeHandler} value={middlename} />
+    <input
+      id={inputMiddleNameId}
+      className="rounded-md shadow-md border"
+      onChange={onChangeHandler}
+      value={middlename}
+    />
   );
 };
 

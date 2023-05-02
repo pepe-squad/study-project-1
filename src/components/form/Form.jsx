@@ -1,13 +1,13 @@
 import React from 'react';
 
-import NameInput from '_components/name-input/NameInput';
-import LastNameInput from '_components/last-name-input/LastNameInput';
-import MiddleNameInput from '_components/middle-name-input/MiddleNameInput';
-import InputDate from '_components/input-date/InputDate';
-import inputNameId from '_consts/formIds';
-import inputlastNameId from '_consts/lastNameId';
-import inputMiddleNameId from '_consts/middleNameId';
-import inputDateId from '_consts/inputDateId';
+import NameInput from '_components/form/components/name-input/NameInput';
+import LastNameInput from '_components/form/components/last-name-input/LastNameInput';
+import MiddleNameInput from '_components/form/components/middle-name-input/MiddleNameInput';
+import InputDate from '_components/form/components/input-date/InputDate';
+import inputNameId from '_components/form/consts/formIds';
+import inputlastNameId from '_components/form/consts/lastNameId';
+import inputMiddleNameId from '_components/form/consts/middleNameId';
+import inputDateId from '_components/form/consts/inputDateId';
 
 const Form = () => {
   return (

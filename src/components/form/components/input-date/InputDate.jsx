@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import InputDateId from '_consts/inputDateId';
+import InputDateId from '_components/form/consts/inputDateId';
 
 const InputDate = () => {
   const [date, setDate] = useState('');
