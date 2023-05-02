@@ -1,17 +1,17 @@
 import React from 'react';
 
 import NameInput from '_components/name-input/NameInput';
-import LastNameInput from '_components/lastName-input/LastNameInput';
-import SurNameInput from '_components/surName-input/SurNameInput';
+import LastNameInput from '_components/last-name-input/LastNameInput';
+import MiddleNameInput from '_components/middle-name-input/MiddleNameInput';
 import InputDate from '_components/input-date/InputDate';
 import inputNameId from '_consts/formIds';
 import inputlastNameId from '_consts/lastNameId';
-import inputsurNameId from '_consts/surNameid';
+import inputMiddleNameId from '_consts/middleNameId';
 import inputDateId from '_consts/inputDateId';
 
 const Form = () => {
   return (
-    <main style={{ lineHeight: '30px' }} className="p-2">
+    <main className="p-2">
       <form>
         <label htmlFor={inputNameId} className="pr-2">
           Firstname:
@@ -25,19 +25,19 @@ const Form = () => {
         <LastNameInput />
       </form>
       <form>
-        <label htmlFor={inputsurNameId} className="pr-2">
-          Midlename:
+        <label htmlFor={inputMiddleNameId} className="pr-2">
+          Middlename:
         </label>
-        <SurNameInput />
+        <MiddleNameInput />
       </form>
       <form>
         <label htmlFor={inputDateId} className="pr-2">
-          Date of birth:
+          Birth Date:
         </label>
         <InputDate />
       </form>
       <form>
-        <button type="button" className="rounded-md shadow-md border border-rose-600 border-4">
+        <button type="button" className="pr-2 rounded-md shadow-md border border-rose-600 border-4">
           Send
         </button>
       </form>
