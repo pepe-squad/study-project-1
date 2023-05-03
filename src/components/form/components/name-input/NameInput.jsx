@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import inputNameId from '_consts/formIds';
+import inputNameId from '_components/form/consts/formIds';
 
 const NameInput = () => {
   const [name, setName] = useState('');
