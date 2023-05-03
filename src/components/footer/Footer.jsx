@@ -1,15 +1,15 @@
 import React from 'react';
 
-import CopyRight from './components/CopyRight';
-import Pages from './components/NavBar';
+import Address from './components/Address';
+import NavBar from './components/NavBar';
 import Subscribe from './components/subscription/Subscribe';
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col p-4 bg-slate-800">
-      <div className="flex justify-around font-semibold text-slate-200">
-        <CopyRight />
-        <Pages />
+    <footer className="bg-blue-900">
+      <div className="font-semibold text-slate-200 flex flex-wrap justify-around  p-4 text-white ">
+        <NavBar />
+        <Address />
         <Subscribe />
       </div>
     </footer>

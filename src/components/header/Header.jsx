@@ -1,9 +1,21 @@
 import React from 'react';
 
+import Appointment from './Appointment';
+import Logo from './Logo';
+import NavBar from './NavBar';
+
 const Header = () => {
   return (
-    <header className="flex flex-col p-4 bg-slate-800">
-      <div className="flex justify-center font-semibold text-slate-200">Pepe Squad Project #1</div>
+    <header className="bg-white">
+      <div className="font-semibold text-slate-200 bg-white flex flex-wrap justify-between  p-4">
+        <div className="flex justify-start">
+          <Logo />
+        </div>
+        <div className="flex justify-end">
+          <NavBar />
+          <Appointment />
+        </div>
+      </div>
     </header>
   );
 };
