@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Main from '_pages/main/Main';
 import About from '_pages/about/About';
-import Service from '_pages/service/Service'
-import Appointment from '_pages/appointment/Appointment'
+import Service from '_pages/service/Service';
+import Appointment from '_pages/appointment/Appointment';
 
 import Startup from './Startup';
 
