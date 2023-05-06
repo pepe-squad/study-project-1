@@ -14,8 +14,8 @@ const config = {
   },
   devServer: {
     hot: true,
-    port: PORT,
-    host: 'localhost',
+    port: 8000,
+    host: '192.168.196.128',
     client: {
       overlay: {
         warnings: false,
@@ -30,5 +30,19 @@ const config = {
     historyApiFallback: true
   }
 };
+const fileloader = {
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif|jpg)$/i,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
+      }
+    ]
+  }
+};
 
-export default merge(common, config);
+export default merge(common, config, fileloader);
