@@ -30,19 +30,5 @@ const config = {
     historyApiFallback: true
   }
 };
-const fileloader = {
-  module: {
-    rules: [
-      {
-        test: /\.(jpg|JPG|jpeg|png|gif|mp3|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader'
-          }
-        ]
-      }
-    ]
-  }
-};
 
-export default merge(common, config, fileloader);
+export default merge(common, config);
