@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '_components/layout/Layout';
 
-import pic from './team-4.jpg';
+import pic from './about.jpg';
 
 import Appointment from './components/Appontment';
 
