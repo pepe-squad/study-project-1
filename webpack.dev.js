@@ -34,7 +34,7 @@ const fileloader = {
   module: {
     rules: [
       {
-        test: /\.(jpg|png|gif|woff|eot|ttf|svg|�)$/i,
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
             loader: 'file-loader'
