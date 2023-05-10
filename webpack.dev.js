@@ -5,7 +5,7 @@ import common from './webpack.common.js';
 
 dotenv.config();
 
-const { PORT, PORT8000, SOCKETS_ENABLE, HOST } = process.env;
+const { PORT, SOCKETS_ENABLE, HOST } = process.env;
 
 const config = {
   mode: 'development',
@@ -14,7 +14,7 @@ const config = {
   },
   devServer: {
     hot: true,
-    port: PORT8000,
+    port: PORT,
     host: HOST,
     client: {
       overlay: {
