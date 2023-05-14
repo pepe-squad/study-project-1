@@ -17,7 +17,7 @@ const Subscribe = () => {
         <input
           id="usermail-sub"
           placeholder="usermail@domain.com"
-          className="rounded-md shadow-md border"
+          className="rounded-md shadow-md border text-black"
           onChange={onChangeHandler}
           value={name}
         />
