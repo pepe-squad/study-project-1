@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import ESLintPlugin from 'eslint-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import webpack from 'webpack';
 
 import alias from './alias.json' assert { type: 'json' };
@@ -76,6 +77,14 @@ const config = {
     }),
     new MiniCssExtractPlugin({
       filename: 'assets/css/style.css'
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'assets/images',
+          to: 'assets/images'
+        }
+      ]
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'

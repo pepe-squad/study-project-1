@@ -16,11 +16,14 @@ const NavBar = () => {
               <Link to="/about" className={linkStyleClass}>
                 About us
               </Link>
-              <Link to="/contact" className={linkStyleClass}>
-                Contact
-              </Link>
               <Link to="/service" className={linkStyleClass}>
                 Service
+              </Link>
+              <Link to="/pages" className={linkStyleClass}>
+                Pages
+              </Link>
+              <Link to="/contact" className={linkStyleClass}>
+                Contact
               </Link>
             </div>
           </div>

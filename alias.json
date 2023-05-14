@@ -4,5 +4,6 @@
   "_hooks": "src/hooks",
   "_pages": "src/pages",
   "_utils": "src/utils",
-  "_app": "src/app"
+  "_app": "src/app",
+  "_assets": "assets"
 }
