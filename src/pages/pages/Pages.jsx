@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Layout from '_components/layout/Layout';
-import { Link } from 'react-router-dom';
 
 const Pages = () => {
   const [docList, setDocList] = useState([]);
