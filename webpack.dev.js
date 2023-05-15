@@ -14,8 +14,8 @@ const config = {
   },
   devServer: {
     hot: true,
-    port: PORT,
-    host: HOST,
+    port: PORT || 8080,
+    host: HOST || 'localhost',
     client: {
       overlay: {
         warnings: false,
