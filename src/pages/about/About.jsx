@@ -2,8 +2,6 @@ import React from 'react';
 
 import Layout from '_components/layout/Layout';
 
-import pic from './about.jpg';
-
 import Appointment from './components/Appontment';
 
 const About = () => {
@@ -42,7 +40,7 @@ const About = () => {
               </div>
             </div>
             <div>
-              <img src={pic} alt="Nothing to depict" />
+              <img src="assets/images/about.jpg" alt="Nothing to depict" />
             </div>
           </div>
         </div>
