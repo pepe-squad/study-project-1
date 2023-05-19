@@ -19,6 +19,9 @@ const NavBar = () => {
               <Link to="/contact" className={linkStyleClass}>
                 Contact
               </Link>
+              <Link to="/staff" className={linkStyleClass}>
+                Staff
+              </Link>
               <Link to="/service" className={linkStyleClass}>
                 Service
               </Link>
