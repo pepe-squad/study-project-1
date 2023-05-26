@@ -19,12 +19,13 @@ const Profile = () => {
   return (
     <Layout title="Profile">
       <div className="m-auto max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <img className="rounded-t-lg" src={docProfile.image} alt="No pics" />
-
-        <div className="p-5 text-center bg-cyan-50">
-          <h5 className="mb-2 text-2xl font-bold  tracking-tight text-gray-900 dark:text-white">{fullName}</h5>
-
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">THIS IS DENTIST</p>
+        <img className="w-full" src={docProfile.image} alt="assets/images/doc-male.png" />
+        <div className="bg-cyan-50 text-center">
+          <h5 className="my-2  text-xl font-medium text-slate-950">{fullName}</h5>
+          <h5 className="my-2 text-sm text-blue-500">Specialization: THIS IS DENTIST!</h5>
+          <h5 className="my-2 text-sm text-blue-500">{`Phone number: ${docProfile.phone}`}</h5>
+          <h5 className="my-2 text-sm text-blue-500">{`E-MAIL: ${docProfile.email}`}</h5>
+          <span>Some info about doc</span>
         </div>
       </div>
     </Layout>
