@@ -12,22 +12,22 @@ const Contact = () => {
         name: 'Main Office',
         city: 'Washington',
         email: 'info@example.com',
-        phone: '+012 345 6789',
+        phone: '+012 345 6789'
       },
       {
         id: 1,
         name: 'East Office',
         city: 'New-York',
         email: 'east@example.com',
-        phone: '+012 345 6790',
+        phone: '+012 345 6790'
       },
       {
         id: 2,
         name: 'West Office',
         city: 'Seatle',
         email: 'west@example.com',
-        phone: '+012 345 6791',
-      },
+        phone: '+012 345 6791'
+      }
     ]);
   }, []);
   const mainOffice = branches.filter((item) => {
@@ -50,7 +50,7 @@ const Contact = () => {
               <div>{item.phone}</div>
               <div>{item.city}</div>
             </Link>
-          )
+          );
         })}
         {eastOffice.map((item) => {
           return (
@@ -60,7 +60,7 @@ const Contact = () => {
               <div>{item.phone}</div>
               <div>{item.city}</div>
             </Link>
-          )
+          );
         })}
         {westOffice.map((item) => {
           return (
@@ -70,7 +70,7 @@ const Contact = () => {
               <div>{item.phone}</div>
               <div>{item.city}</div>
             </Link>
-          )
+          );
         })}
       </div>
     </Layout>
