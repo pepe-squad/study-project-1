@@ -18,7 +18,7 @@ const Profile = () => {
 
   return (
     <Layout title="Profile">
-      <div className="m-auto max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="profileCard">
         <img className="w-full" src={docProfile.image} alt="assets/images/doc-male.png" />
         <div className="bg-cyan-50 text-center">
           <h5 className="my-2  text-xl font-medium text-slate-950">{fullName}</h5>
