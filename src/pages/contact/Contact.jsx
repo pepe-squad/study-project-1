@@ -1,80 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Layout from '_components/layout/Layout';
+import contactsArray from './consts/contactsArray';
 
 const Contact = () => {
-  const [branches, setBranches] = useState([]);
-  useEffect(() => {
-    setBranches([
-      {
-        id: 0,
-        name: 'Main Office',
-        city: 'Washington',
-        email: 'info@example.com',
-        phone: '+012 345 6789'
-      },
-      {
-        id: 1,
-        name: 'East Office',
-        city: 'New-York',
-        email: 'east@example.com',
-        phone: '+012 345 6790'
-      },
-      {
-        id: 2,
-        name: 'West Office',
-        city: 'Seatle',
-        email: 'west@example.com',
-        phone: '+012 345 6791'
-      }
-    ]);
-  }, []);
-  const mainOffice = branches.filter((item) => {
-    return item.city === 'Washington';
-  });
-  const eastOffice = branches.filter((item) => {
-    return item.city === 'New-York';
-  });
-  const westOffice = branches.filter((item) => {
-    return item.city === 'Seatle';
-  });
   return (
     <Layout title="Contact">
-      <div className="flex flex-row grid grid-cols-3 gap-20 items-stretch pl-20 py-5">
-        {mainOffice.map((item) => {
-          return (
-            <Link key={item.id} to={`${item.id}`}>
-              <div>{item.name}</div>
-              <div>{item.email}</div>
-              <div>{item.phone}</div>
-              <div>{item.city}</div>
-            </Link>
-          );
-        })}
-        {eastOffice.map((item) => {
-          return (
-            <Link key={item.id} to={`${item.id}`}>
-              <div>{item.name}</div>
-              <div>{item.email}</div>
-              <div>{item.phone}</div>
-              <div>{item.city}</div>
-            </Link>
-          );
-        })}
-        {westOffice.map((item) => {
-          return (
-            <Link key={item.id} to={`${item.id}`}>
-              <div>{item.name}</div>
-              <div>{item.email}</div>
-              <div>{item.phone}</div>
-              <div>{item.city}</div>
-            </Link>
-          );
-        })}
+      <div className="m-5 h-full">
+        <div className="m-5 flex flex-col">
+          <div className="flex w-full h-full bg-cyan-50">
+            <div className="basis-2/9 mr-40 text-cyan-600 text-2xl pl-20">CONTACT US</div>
+            <div className="basis-7/9 text-4xl font-bold">Feel Free To Contact Us</div>
+          </div>
+          <div className="flex flex-row mt-20">
+            {contactsArray.map((item) => {
+              return (
+                <Link key={item.id} to={`${item.id}`} className="w-1/4 pl-20 h-full flex-auto object-center bg-cyan-50 px-15 gap-4 hover:bg-orange-700">
+                  <div className="text-xl">{item.name}</div>
+                  <div className="text-slate-400">{item.city}</div>
+                  <div className="text-xl">Email Us</div>
+                  <div className="text-slate-400">{item.email}</div>
+                  <div className="text-xl">Call Us</div>
+                  <div className="text-slate-400">{item.phone}</div>
+                </Link>
+              )
+            })}
+          </div>
+        </div>
       </div>
     </Layout>
-  );
-};
 
+  )
+}
 export default Contact;
