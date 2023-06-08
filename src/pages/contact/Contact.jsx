@@ -15,7 +15,11 @@ const Contact = () => {
           <div className="flex flex-row mt-20">
             {contactsArray.map((item) => {
               return (
-                <Link key={item.id} to={`${item.id}`} className="w-1/4 pl-20 h-full flex-auto object-center bg-cyan-50 px-15 gap-4 hover:bg-orange-700">
+                <Link
+                  key={item.id}
+                  to={`${item.id}`}
+                  className="w-1/4 pl-20 h-full flex-auto object-center bg-cyan-50 px-15 gap-4 hover:bg-orange-700"
+                >
                   <div className="text-xl">{item.name}</div>
                   <div className="text-slate-400">{item.city}</div>
                   <div className="text-xl">Email Us</div>
@@ -23,13 +27,12 @@ const Contact = () => {
                   <div className="text-xl">Call Us</div>
                   <div className="text-slate-400">{item.phone}</div>
                 </Link>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </Layout>
-
-  )
-}
+  );
+};
 export default Contact;
