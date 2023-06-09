@@ -15,7 +15,7 @@ const Contact = () => {
                 <Link
                   key={item.id}
                   to={`${item.id}`}
-                  className="flex flex-col w-64 h-40 py-2 bg-cyan-50 gap-4 rounded hover:bg-cyan-200 border border-cyan-300 place-items-center"
+                  className="flex flex-col w-64 h-40 py-2 bg-cyan-50 gap-4 rounded hover:bg-cyan-200 border place-items-center"
                 >
                   <div className="font-medium text-cyan-600">{item.name}</div>
                   <div className="text-slate-400">{item.city}</div>

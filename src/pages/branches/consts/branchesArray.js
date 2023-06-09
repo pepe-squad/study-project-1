@@ -1,14 +1,19 @@
+import washington from './washington.png'
+import ny from './ny.png'
+import seattle from './seattle.png'
+
 const branchesArray = [
   {
     id: 0,
-    name: 'Main Office',
+    image: washington,
+    name: 'Main',
     city: 'Washington',
     email: 'info@example.com',
-    phone: '+012 345 6789',
+    phone: '+1 202-873-2600',
     services: 'Cosmetic Dentistry, Dental Implants, Dental Bridges, Teeth Whitening',
     chiefPhysician: 'John Smith',
-    area: 'Midtown East Manhattan',
-    adress: '133 East 58th St., ste 409',
+    area: 'Downtown',
+    adress: '1430 K St NW #800',
     schedule: {
       Sunday: '9am-6pm',
       Monday: '9am-6pm',
@@ -16,11 +21,12 @@ const branchesArray = [
       Wednesday: '9am-6pm',
       Thursday: '9am-6pm',
       Friday: '9am-3pm',
-      Saturday: '9am-3pm',
+      Saturday: '9am-3pm'
     }
   },
   {
     id: 1,
+    image: ny,
     name: 'East Office',
     city: 'New-York',
     email: 'east@example.com',
@@ -36,19 +42,20 @@ const branchesArray = [
       Wednesday: '9am-6pm',
       Thursday: '9am-6pm',
       Friday: '9am-3pm',
-      Saturday: '9am-3pm',
+      Saturday: '9am-3pm'
     }
   },
   {
     id: 2,
+    image: seattle,
     name: 'West Office',
     city: 'Seatle',
     email: 'west@example.com',
-    phone: '+012 345 6791',
+    phone: '+1 206-962-2835',
     services: 'Cosmetic Dentistry, Dental Bridges, Teeth Whitening',
     chiefPhysician: 'Michel Greenwood',
-    area: 'Midtown East Manhattan',
-    adress: '133 East 58th St., ste 409',
+    area: 'Qeen Ann Hill',
+    adress: '620 1st Ave N',
     schedule: {
       Sunday: '9am-6pm',
       Monday: '9am-6pm',
@@ -56,7 +63,7 @@ const branchesArray = [
       Wednesday: '9am-6pm',
       Thursday: '9am-6pm',
       Friday: '9am-3pm',
-      Saturday: '9am-3pm',
+      Saturday: '9am-3pm'
     }
   }
 ];

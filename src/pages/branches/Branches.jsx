@@ -20,15 +20,19 @@ const Branches = () => {
                 return (
                   <div key={item.id}>
                     <div className="text-3xl font-bold text-cyan-600 text-center ">Our {item.city} City Office</div>
-                    <div className="flex flex-row flex-wrap mt-20 gap-2 space-x-20 justify-center">
-                      <div className="basis-1/3">123</div>
-                      <div className="flex flex-col basis-1/3 h-full py-5 place-items-center">
+                    <div className="flex flex-row flex-wrap h-96 my-20 gap-2 space-x-20 justify-center">
+                      <img src={item.image} alt="123" height="400" className="basis-1/3 items-start  bg-cyan-50 object-fill" />
+                      <div className="flex flex-col basis-1/3 py-5 place-items-center  border rounded bg-cyan-50">
                         <div className="font-medium text-cyan-600">{item.area}</div>
                         <div>Dr. {item.chiefPhysician}</div>
-                        <button type="button"><div className="underline hover:no-underline">{item.phone}</div></button>
+                        <button type="button">
+                          <div className="underline hover:no-underline">{item.phone}</div>
+                        </button>
                         <div>{item.adress}</div>
-                        <button type="button"><div className="underline hover:no-underline">Get Direction</div></button>
-                        <div>{item.services}</div>
+                        <button type="button">
+                          <div className="underline hover:no-underline">Get Direction</div>
+                        </button>
+                        <div className="text-center">{item.services}</div>
                         <div className="flex flex-col place-items-center">
                           <div className="text-cyan-600">Hours</div>
                           <div className="flex flex-col place-items-center">
