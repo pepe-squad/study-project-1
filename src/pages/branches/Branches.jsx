@@ -20,9 +20,14 @@ const Branches = () => {
                 return (
                   <div key={item.id}>
                     <div className="text-3xl font-bold text-cyan-600 text-center ">Our {item.city} City Office</div>
-                    <div className="flex flex-row flex-wrap h-96 my-20 gap-2 space-x-20 justify-center">
-                      <img src={item.image} alt="123" height="400" className="basis-1/3 items-start  bg-cyan-50 object-fill" />
-                      <div className="flex flex-col basis-1/3 py-5 place-items-center  border rounded bg-cyan-50">
+                    <div className="flex flex-row flex-wrap h-full mt-10 gap-2 space-x-20 justify-center items-center">
+                      <img
+                        src={item.image}
+                        alt="123"
+                        height="100"
+                        className="basis-1/3 items-start object-scale-down"
+                      />
+                      <div className="flex flex-col basis-1/3 py-5 place-items-center">
                         <div className="font-medium text-cyan-600">{item.area}</div>
                         <div>Dr. {item.chiefPhysician}</div>
                         <button type="button">

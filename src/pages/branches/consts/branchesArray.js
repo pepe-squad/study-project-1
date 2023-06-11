@@ -1,6 +1,6 @@
-import washington from './washington.png'
-import ny from './ny.png'
-import seattle from './seattle.png'
+import washington from './washington.png';
+import ny from './ny.png';
+import seattle from './seattle.png';
 
 const branchesArray = [
   {
