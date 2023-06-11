@@ -86,6 +86,10 @@ const config = {
         {
           from: 'assets/images',
           to: 'assets/images'
+        },
+        {
+          from: 'public',
+          to: '[name][ext]'
         }
       ]
     }),
