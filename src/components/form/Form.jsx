@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
+import cn from 'classnames';
 
 import NameInput from '_components/form/components/name-input/NameInput';
 import LastNameInput from '_components/form/components/last-name-input/LastNameInput';
@@ -9,7 +10,15 @@ import inputlastNameId from '_components/form/consts/lastNameId';
 import inputMiddleNameId from '_components/form/consts/middleNameId';
 import inputDateId from '_components/form/consts/inputDateId';
 
+import SendButton from './components/send-btn/SendButton';
+
 const Form = () => {
+  const [checked, setChecked] = useState(false);
+
+  const onChangeHandler = useCallback(() => {
+    setChecked((prev) => !prev);
+  }, []);
+
   return (
     <main className="p-2">
       <form>
@@ -37,9 +46,21 @@ const Form = () => {
         <InputDate />
       </form>
       <form>
-        <button type="button" className="text-white px-7 bg-slate-800 hover:bg-slate-500">
-          Send
-        </button>
+        <div className="flex flex-col w-64">
+          <button
+            type="button"
+            className={cn({
+              'text-white px-7 py-4 m-4 bg-slate-800 hover:bg-slate-500 rounded-md': checked,
+              'text-white px-7 py-4 m-4 bg-red-800 hover:bg-red-500 rounded-md': !checked
+            })}
+          >
+            Send
+          </button>
+          <input type="checkbox" onChange={onChangeHandler} checked={checked} />I am hungry
+          <SendButton appearance="outline" disabled={!checked}>
+            Send form
+          </SendButton>
+        </div>
       </form>
     </main>
   );
