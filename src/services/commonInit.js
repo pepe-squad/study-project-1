@@ -1,8 +1,6 @@
 import { sample } from 'effector';
 
-import {
-  getDocListEvent, getDocListFx, docListStore, specListStore
-} from './commonDomain';
+import { getDocListEvent, getDocListFx, docListStore, specListStore } from './commonDomain';
 
 sample({
   clock: getDocListEvent,

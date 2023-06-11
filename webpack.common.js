@@ -6,7 +6,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import webpack from 'webpack';
 
-import alias from './alias.json';
+import alias from './alias.json' assert { type: 'json' };
 
 dotenv.config();
 
