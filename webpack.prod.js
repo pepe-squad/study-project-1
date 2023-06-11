@@ -3,7 +3,7 @@ import { merge } from 'webpack-merge';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 
-import common from './webpack.common.js';
+import common from './webpack.common';
 
 dotenv.config();
 

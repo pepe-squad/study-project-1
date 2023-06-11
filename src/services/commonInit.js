@@ -6,7 +6,7 @@ import {
 
 sample({
   clock: getDocListEvent,
-  target: getDocListFx,
+  target: getDocListFx
 });
 
 sample({
@@ -18,5 +18,5 @@ sample({
       return { ...doc, spec: specList[specIndex] };
     });
   },
-  target: docListStore,
+  target: docListStore
 });
