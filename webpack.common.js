@@ -36,12 +36,21 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        },
+        resolve: {
+          fullySpecified: false
+        }
+      },
+      {
         test: /\.(jpg|JPG|jpe?g|png|gif|mp3|svg)$/i,
         use: {
           loader: 'file-loader'
         }
       },
-
       {
         test: /\.(js|jsx)$/i,
         exclude: /node_modules/,

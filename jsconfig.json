@@ -9,6 +9,7 @@
       "_hooks/*": ["src/hooks/*"],
       "_pages/*": ["src/pages/*"],
       "_utils/*": ["src/utils/*"],
+      "_services/*": ["src/services/*"],
       "_app/*": ["src/app/*"]
     }
   },

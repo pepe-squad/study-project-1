@@ -11,5 +11,6 @@ dist
 yarn-error.log
 
 # Misc
+.vscode
 .DS_Store
 coverage
