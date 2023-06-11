@@ -22,7 +22,7 @@ const Staff = () => {
     fetch('https://dummyjson.com/users')
       .then((res) => res.json())
       .then(({ users }) => {
-        users.splice(20, 10);
+        users.slice(20, 10);
         setDocList(users);
       });
   }, []);
