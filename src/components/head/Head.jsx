@@ -11,7 +11,7 @@ const Head = ({ title }) => {
 };
 
 Head.defaultProps = {
-  title: `${window.location.host}`
+  title: `${window.location.host}`,
 };
 
 export default Head;
