@@ -1,30 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useStore } from 'effector-react';
 
 import Layout from '_components/layout/Layout';
-import { Link } from 'react-router-dom';
+import { docListStore, getDocListEvent } from '_services/commonDomain';
 
 const Staff = () => {
-  const [docList, setDocList] = useState([]);
-  const specs = [
-    'Dentist-therapist',
-    'Orthodontist',
-    'Orthopedist',
-    'Periodontist',
-    'Surgeon',
-    "Children's dentist",
-    'Hygienist',
-    'Dentist',
-    'Technician',
-    'Dental assistant'
-  ];
+  const docList = useStore(docListStore);
 
   useEffect(() => {
-    fetch('https://dummyjson.com/users')
-      .then((res) => res.json())
-      .then(({ users }) => {
-        users.slice(20, 10);
-        setDocList(users);
-      });
+    getDocListEvent();
   }, []);
 
   return (
@@ -39,7 +24,7 @@ const Staff = () => {
                 <div className="bg-cyan-50 text-center">
                   <h5 className="mt-8  text-xl font-medium text-slate-950">{fullName}</h5>
                   <span className="text-sm text-blue-500">
-                    {`Specialization: ${specs[Math.floor(Math.random() * 10)]}`}
+                    {/* {`Specialization: ${specs[Math.floor(Math.random() * 10)]}`} */}
                   </span>
                 </div>
               </div>

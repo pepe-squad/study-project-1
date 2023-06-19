@@ -1,10 +1,15 @@
 import { createDomain } from 'effector';
-import { status } from 'patronum';
+
+import initialSpecList from '_services/initialSpecList';
+// import { status } from 'patronum';
 
 const commonDomain = createDomain('commonDomain');
 
-export const $docList = commonDomain.createStore([]);
+export const docListStore = commonDomain.createStore([]);
+export const specListStore = commonDomain.createStore(initialSpecList);
+
 export const getDocListEvent = commonDomain.createEvent('getDocListEvent');
+
 export const getDocListFx = commonDomain.createEffect(async () => {
   const doctors = await fetch('https://dummyjson.com/users')
     .then((res) => res.json())
@@ -13,3 +18,8 @@ export const getDocListFx = commonDomain.createEffect(async () => {
     });
   return doctors;
 });
+
+docListStore.on(getDocListFx.doneData, (state, payload) => payload);
+docListStore.watch((data) => console.log('store data', data));
+
+// specListStore.watch((data) => console.log('store data', data));

@@ -23,3 +23,15 @@ Some long styles are moved to style.css
 ### Removed
 
 Long style classes
+
+## [1.1.0] - 2023-06-19
+
+### Added
+
+Effector
+
+Spinner
+
+### Changed
+
+### Removed
