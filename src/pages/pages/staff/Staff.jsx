@@ -15,7 +15,6 @@ const Staff = () => {
 
   return (
     <Layout title="Staff">
-      {' '}
       {!docList ? (
         <Spinner />
       ) : (

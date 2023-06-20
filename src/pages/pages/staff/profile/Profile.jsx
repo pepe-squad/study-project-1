@@ -8,11 +8,10 @@ import { docListStore, getDocListEvent } from '_services/commonDomain';
 const Profile = () => {
   const { id } = useParams();
   const docList = useStore(docListStore);
-  const docProfile = docList.find((item) => {
-    console.log(item.id);
-    return item.id === id;
-  });
-  console.log('WHHHAAAT', docProfile);
+  const docProfile = docList.slice(id - 1, id)[0];
+
+  console.log('doclist', docList); // spisok docov
+  console.log('docProfile', docProfile); // 1 doc
 
   // const fullName = `${docProfile.firstName} ${docProfile.lastName}`;
 
