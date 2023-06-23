@@ -20,4 +20,4 @@ export const getDocListFx = commonDomain.createEffect(async () => {
 });
 
 docListStore.on(getDocListFx.doneData, (state, payload) => payload);
-docListStore.watch((data) => console.log('store data', data));
+// docListStore.watch((data) => console.log('store data', data));

@@ -21,7 +21,6 @@ const Staff = () => {
         <div className="flex flex-wrap gap-4 justify-between p-12">
           {docList.map((doc) => {
             const fullName = `${doc.firstName} ${doc.lastName}`;
-            console.log('DOC', doc);
             return (
               <Link key={doc.id} to={`${doc.id}`}>
                 <div className="staffCards">
