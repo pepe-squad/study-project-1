@@ -32,6 +32,8 @@ Effector
 
 Spinner
 
+Favico
+
 ### Changed
 
 ### Removed
