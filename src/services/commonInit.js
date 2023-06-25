@@ -1,6 +1,8 @@
 import { sample } from 'effector';
 
-import { docListStore, getDocListEvent, getDocListFx, specListStore } from './commonDomain';
+import { specList } from '_consts/specList';
+
+import { docListStore, getDocListFx, getDocListEvent } from './commonDomain';
 
 sample({
   clock: getDocListEvent,
@@ -9,10 +11,14 @@ sample({
 
 sample({
   clock: getDocListFx.doneData,
-  source: specListStore,
-  fn: (specList, docList) => {
+  fn: (docList) => {
     return docList.map((doc) => {
+      if (doc?.spec) {
+        return doc;
+      }
+
       const specIndex = Math.trunc(Math.random() * (specList.length - 0) + 0);
+
       return { ...doc, spec: specList[specIndex] };
     });
   },

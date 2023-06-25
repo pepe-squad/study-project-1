@@ -1,4 +1,4 @@
-const initialSpecList = [
+export const specList = [
   'Dentist-therapist',
   'Orthodontist',
   'Orthopedist',
@@ -10,5 +10,3 @@ const initialSpecList = [
   'Technician',
   'Dental assistant'
 ];
-
-export default initialSpecList;

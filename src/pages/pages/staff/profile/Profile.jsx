@@ -9,8 +9,8 @@ const Profile = () => {
   const { id } = useParams();
   const docList = useStore(docListStore);
   const docProfile = useMemo(() => {
-    return docList.find(({ id: userId }) => String(userId) === id);
-  }, id);
+    return docList?.find(({ id: userId }) => String(userId) === id);
+  }, [id, docList]);
 
   const fName = docProfile?.firstName?.replace(/"/g, '');
   const lName = docProfile?.lastName?.replace(/"/g, '');

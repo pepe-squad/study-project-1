@@ -4,10 +4,11 @@ import { useStore } from 'effector-react';
 
 import Layout from '_components/layout/Layout';
 import Spinner from '_components/spinner/Spinner';
-import { docListStore, getDocListEvent } from '_services/commonDomain';
+import { docListStore, getDocListEvent, getDocListStatusStore } from '_services/commonDomain';
 
 const Staff = () => {
   const docList = useStore(docListStore);
+  const isPending = useStore(getDocListStatusStore);
 
   useEffect(() => {
     getDocListEvent();
@@ -15,11 +16,11 @@ const Staff = () => {
 
   return (
     <Layout title="Staff">
-      {!docList ? (
+      {isPending ? (
         <Spinner />
       ) : (
         <div className="flex flex-wrap gap-4 justify-between p-12">
-          {docList.map((doc) => {
+          {docList?.map((doc) => {
             const fullName = `${doc.firstName} ${doc.lastName}`;
             return (
               <Link key={doc.id} to={`${doc.id}`}>
