@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import Layout from '_components/layout/Layout';
+
 import contactsArray from './consts/contactsArray';
 
 const Contact = () => {

@@ -1,11 +1,7 @@
-import washington from './washington.png';
-import ny from './ny.png';
-import seattle from './seattle.png';
-
 const branchesArray = [
   {
     id: 0,
-    image: washington,
+    image: 'assets/images/washington.png',
     name: 'Main',
     city: 'Washington',
     email: 'info@example.com',
@@ -26,7 +22,7 @@ const branchesArray = [
   },
   {
     id: 1,
-    image: ny,
+    image: 'assets/images/ny.png',
     name: 'East Office',
     city: 'New-York',
     email: 'east@example.com',
@@ -47,7 +43,7 @@ const branchesArray = [
   },
   {
     id: 2,
-    image: seattle,
+    image: 'assets/images/seattle.png',
     name: 'West Office',
     city: 'Seatle',
     email: 'west@example.com',
