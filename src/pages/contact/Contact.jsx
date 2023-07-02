@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Layout from '_components/layout/Layout';
 
-import contactsArray from './consts/contactsArray';
+import branches from '_pages/branches/consts/branches';
 
 const Contact = () => {
   return (
@@ -12,7 +12,7 @@ const Contact = () => {
         <div className="m-5">
           <div className="text-3xl font-bold text-cyan-600 text-center">Choose Your Office</div>
           <div className="flex flex-row flex-wrap mt-20 gap-2 space-x-20 justify-center">
-            {contactsArray.map((item) => {
+            {Object.values(branches).map((item) => {
               return (
                 <Link
                   key={item.id}
