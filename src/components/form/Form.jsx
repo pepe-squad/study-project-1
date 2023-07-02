@@ -8,6 +8,7 @@ import inputNameId from '_components/form/consts/formIds';
 import inputlastNameId from '_components/form/consts/lastNameId';
 import inputMiddleNameId from '_components/form/consts/middleNameId';
 import inputDateId from '_components/form/consts/inputDateId';
+import SendButton from './components/send-btn/SendBtn';
 
 const Form = () => {
   return (
@@ -37,9 +38,8 @@ const Form = () => {
         <InputDate />
       </form>
       <form>
-        <button type="button" className="text-white px-7 bg-slate-800 hover:bg-slate-500">
-          Send
-        </button>
+        <SendButton />
+        <SendButton appearance="secondary" />
       </form>
     </main>
   );
