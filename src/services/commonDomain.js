@@ -1,4 +1,5 @@
 import { createDomain } from 'effector';
+import { pending } from 'patronum';
 
 import initialSpecList from '_services/initialSpecList';
 // import { status } from 'patronum';
@@ -18,6 +19,8 @@ export const getDocListFx = commonDomain.createEffect(async () => {
     });
   return doctors;
 });
+
+export const getDocListStatusStore = pending({ effects: [getDocListFx] });
 
 docListStore.on(getDocListFx.doneData, (state, payload) => payload);
 // docListStore.watch((data) => console.log('store data', data));
