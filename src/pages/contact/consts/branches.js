@@ -1,6 +1,6 @@
-const branchesArray = [
-  {
-    id: 0,
+const branches = {
+  washingtonOffice: {
+    id: 'washingtonOffice',
     image: 'assets/images/washington.png',
     name: 'Main',
     city: 'Washington',
@@ -20,8 +20,8 @@ const branchesArray = [
       Saturday: '9am-3pm'
     }
   },
-  {
-    id: 1,
+  nyOffice: {
+    id: 'nyOffice',
     image: 'assets/images/ny.png',
     name: 'East Office',
     city: 'New-York',
@@ -41,11 +41,11 @@ const branchesArray = [
       Saturday: '9am-3pm'
     }
   },
-  {
-    id: 2,
+  seattleOffice: {
+    id: 'seattleOffice',
     image: 'assets/images/seattle.png',
     name: 'West Office',
-    city: 'Seatle',
+    city: 'Seattle',
     email: 'west@example.com',
     phone: '+1 206-962-2835',
     services: 'Cosmetic Dentistry, Dental Bridges, Teeth Whitening',
@@ -62,5 +62,6 @@ const branchesArray = [
       Saturday: '9am-3pm'
     }
   }
-];
-export default branchesArray;
+};
+
+export default branches;
