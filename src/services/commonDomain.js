@@ -1,13 +1,21 @@
 import { createDomain } from 'effector';
 import { pending } from 'patronum';
 
-import initialSpecList from '_services/initialSpecList';
-// import { status } from 'patronum';
-
 const commonDomain = createDomain('commonDomain');
 
 export const docListStore = commonDomain.createStore([]);
-export const specListStore = commonDomain.createStore(initialSpecList);
+export const specListStore = commonDomain.createStore([
+  'Dentist-therapist',
+  'Orthodontist',
+  'Orthopedist',
+  'Periodontist',
+  'Surgeon',
+  "Children's dentist",
+  'Hygienist',
+  'Dentist',
+  'Technician',
+  'Dental assistant'
+]);
 
 export const getDocListEvent = commonDomain.createEvent('getDocListEvent');
 
@@ -23,4 +31,3 @@ export const getDocListFx = commonDomain.createEffect(async () => {
 export const getDocListStatusStore = pending({ effects: [getDocListFx] });
 
 docListStore.on(getDocListFx.doneData, (state, payload) => payload);
-// docListStore.watch((data) => console.log('store data', data));

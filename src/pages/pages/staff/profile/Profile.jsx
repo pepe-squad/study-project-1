@@ -14,9 +14,9 @@ const Profile = () => {
   }, [id, docList]);
   const isPending = useStore(getDocListStatusStore);
 
-  const fName = docProfile?.firstName?.replace(/"/g, '');
-  const lName = docProfile?.lastName?.replace(/"/g, '');
-  const fullName = `${fName} ${lName}`;
+  const firstName = docProfile?.firstName?.replace(/"/g, '');
+  const lastName = docProfile?.lastName?.replace(/"/g, '');
+  const fullName = `${firstName} ${lastName}`;
 
   useEffect(() => {
     getDocListEvent();
