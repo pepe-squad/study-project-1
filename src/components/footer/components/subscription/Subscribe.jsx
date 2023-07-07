@@ -21,10 +21,7 @@ const Subscribe = () => {
           onChange={onChangeHandler}
           value={name}
         />
-        <button
-          className="bg-transparent hover:bg-blue-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mx-2"
-          type="button"
-        >
+        <button className="subscribeButton" type="button">
           Подписаться
         </button>
       </form>
