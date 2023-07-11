@@ -1,4 +1,7 @@
-const branches = {
+import { createDomain } from 'effector';
+
+const branchDomain = createDomain('branchDomain')
+const $branches = branchDomain.createStore({
   washingtonOffice: {
     id: 'washingtonOffice',
     image: 'assets/images/washington.png',
@@ -62,6 +65,6 @@ const branches = {
       Saturday: '9am-3pm'
     }
   }
-};
+})
 
-export default branches;
+export default $branches

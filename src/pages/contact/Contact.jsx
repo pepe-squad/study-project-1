@@ -1,18 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useStore } from 'effector-react';
 
 import Layout from '_components/layout/Layout';
 
-import branches from '_pages/contact/consts/branches';
+import $branches from '_services/branch-domain/branchDomain';
 
 const Contact = () => {
+  const branchMain = useStore($branches)
   return (
     <Layout title="Contact">
       <div className="m-5 h-full">
         <div className="m-5">
           <div className="text-3xl font-bold text-cyan-600 text-center">Choose Your Office</div>
           <div className="flex flex-row flex-wrap mt-20 gap-2 space-x-20 justify-center">
-            {Object.values(branches).map((item) => {
+            {Object.values(branchMain).map((item) => {
               return (
                 <Link
                   key={item.id}
