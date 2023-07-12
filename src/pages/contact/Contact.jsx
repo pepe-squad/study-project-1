@@ -7,7 +7,7 @@ import Layout from '_components/layout/Layout';
 import $branches from '_services/branch-domain/branchDomain';
 
 const Contact = () => {
-  const branchMain = useStore($branches)
+  const branchMain = useStore($branches);
   return (
     <Layout title="Contact">
       <div className="mx-5 mt-5 mb-20 h-full">
@@ -18,10 +18,13 @@ const Contact = () => {
               const container = {
                 background: `url(${item.image})`,
                 backgroundColor: 'rgba(218, 240, 245, alpha)'
-              }
+              };
               return (
                 <Link key={item.id} to={`${item.id}`}>
-                  <div style={container} className="flex flex-col w-64 h-40 py-2 gap-4 rounded hover:bg-cyan-100 border place-items-center">
+                  <div
+                    style={container}
+                    className="flex flex-col w-64 h-40 py-2 gap-4 rounded hover:bg-cyan-100 border place-items-center"
+                  >
                     <div className="font-medium text-cyan-600">{item.name}</div>
                     <div className="text-gray-500">{item.city}</div>
                     <div className="text-gray-500">{item.email}</div>

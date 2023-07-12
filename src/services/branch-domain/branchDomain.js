@@ -1,6 +1,6 @@
 import { createDomain } from 'effector';
 
-const branchDomain = createDomain('branchDomain')
+const branchDomain = createDomain('branchDomain');
 const $branches = branchDomain.createStore({
   washingtonOffice: {
     id: 'washingtonOffice',
@@ -68,7 +68,7 @@ const $branches = branchDomain.createStore({
       Saturday: '9am-3pm'
     }
   }
-})
+});
 // const getDirectionEvent = branchDomain.createEvent('getDirectionEvent')
 
-export default $branches
+export default $branches;

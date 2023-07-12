@@ -14,13 +14,23 @@ const Service = () => {
           <span className="bg-green-500 text-white rounded-full py-1 px-3">Открыто</span>
         </div>
         <div className="mt-4">
-          <p className="text-gray-500"><span className="font-bold">Адрес:</span> ул. Ленина 10</p>
-          <p className="text-gray-500"><span className="font-bold">Режим работы:</span> Пн-Пт: 8:00-20:00, Сб: 9:00-18:00, Вс: выходной</p>
-          <p className="text-gray-500"><span className="font-bold">Телефон:</span> +7 (123) 456-78-90</p>
-          <p className="text-gray-500"><span className="font-bold">E-mail:</span> example@example.com</p>
+          <p className="text-gray-500">
+            <span className="font-bold">Адрес:</span> ул. Ленина 10
+          </p>
+          <p className="text-gray-500">
+            <span className="font-bold">Режим работы:</span> Пн-Пт: 8:00-20:00, Сб: 9:00-18:00, Вс: выходной
+          </p>
+          <p className="text-gray-500">
+            <span className="font-bold">Телефон:</span> +7 (123) 456-78-90
+          </p>
+          <p className="text-gray-500">
+            <span className="font-bold">E-mail:</span> example@example.com
+          </p>
         </div>
         <div className="mt-4 flex justify-end">
-          <a href="#" className="text-blue-500 hover:text-blue-700">Подробнее</a>
+          <a href="#" className="text-blue-500 hover:text-blue-700">
+            Подробнее
+          </a>
         </div>
       </div>
     </Layout>

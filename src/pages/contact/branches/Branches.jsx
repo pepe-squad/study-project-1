@@ -9,7 +9,7 @@ import Branch from './components/branch/Branch';
 const Branches = () => {
   const params = useParams();
   const branchesId = params.id;
-  const branchInfo = useStore($branches)
+  const branchInfo = useStore($branches);
 
   return (
     <Layout title="Branches">
