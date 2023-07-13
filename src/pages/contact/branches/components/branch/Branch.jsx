@@ -13,7 +13,7 @@ const Branch = ({ item }) => {
           <iframe
             className="border-2 border-cyan-600/50"
             title="map"
-            src={item.map}
+            src={item.maps}
             width="500"
             height="352"
             allowfullscreen=""
