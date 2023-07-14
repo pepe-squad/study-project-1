@@ -2,6 +2,28 @@ import { createDomain } from 'effector';
 
 const branchDomain = createDomain('branchDomain');
 const $branches = branchDomain.createStore({
+  seattleOffice: {
+    id: 'seattleOffice',
+    image: 'assets/images/seattle.png',
+    name: 'West Office',
+    city: 'Seattle',
+    email: 'west@example.com',
+    phone: '+1 206-962-2835',
+    services: 'Cosmetic Dentistry, Dental Bridges, Teeth Whitening',
+    chiefPhysician: 'Michel Greenwood',
+    area: 'Qeen Ann Hill',
+    adress: '620 1st Ave N',
+    maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.796941734997!2d-73.97507572341196!3d40.744493435624776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25905430706e3%3A0xc10b77a68f69f286!2zNjIwIDFzdCBBdmUuLCBOZXcgWW9yaywgTlkgMTAwMTYsINCh0KjQkA!5e0!3m2!1sru!2sru!4v1689158733562!5m2!1sru!2sru',
+    schedule: {
+      Sunday: '9am-6pm',
+      Monday: '9am-6pm',
+      Tuesday: '9am-6pm',
+      Wednesday: '9am-6pm',
+      Thursday: '9am-6pm',
+      Friday: '9am-3pm',
+      Saturday: '9am-3pm'
+    }
+  },
   washingtonOffice: {
     id: 'washingtonOffice',
     image: 'assets/images/washington.png',
@@ -46,28 +68,6 @@ const $branches = branchDomain.createStore({
       Saturday: '9am-3pm'
     }
   },
-  seattleOffice: {
-    id: 'seattleOffice',
-    image: 'assets/images/seattle.png',
-    name: 'West Office',
-    city: 'Seattle',
-    email: 'west@example.com',
-    phone: '+1 206-962-2835',
-    services: 'Cosmetic Dentistry, Dental Bridges, Teeth Whitening',
-    chiefPhysician: 'Michel Greenwood',
-    area: 'Qeen Ann Hill',
-    adress: '620 1st Ave N',
-    maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.796941734997!2d-73.97507572341196!3d40.744493435624776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25905430706e3%3A0xc10b77a68f69f286!2zNjIwIDFzdCBBdmUuLCBOZXcgWW9yaywgTlkgMTAwMTYsINCh0KjQkA!5e0!3m2!1sru!2sru!4v1689158733562!5m2!1sru!2sru',
-    schedule: {
-      Sunday: '9am-6pm',
-      Monday: '9am-6pm',
-      Tuesday: '9am-6pm',
-      Wednesday: '9am-6pm',
-      Thursday: '9am-6pm',
-      Friday: '9am-3pm',
-      Saturday: '9am-3pm'
-    }
-  }
 });
 // const getDirectionEvent = branchDomain.createEvent('getDirectionEvent')
 

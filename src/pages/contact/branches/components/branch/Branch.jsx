@@ -8,10 +8,10 @@ const Branch = ({ item }) => {
   return (
     <div>
       <div className="text-3xl font-bold text-cyan-600 text-center ">Our {item.city} City Office</div>
-      <div className="flex flex-row flex-wrap h-full my-20 space-x-20 justify-center items-center">
+      <div className="flex flex-row flex-wrap h-full my-20 justify-center items-center">
         <div>
           <iframe
-            className="border-2 border-cyan-600/50"
+            className="border-4 border-gray-200 rounded-lg"
             title="map"
             src={item.maps}
             width="500"
