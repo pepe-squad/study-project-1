@@ -36,6 +36,13 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.m?js$/,
+
+        resolve: {
+          fullySpecified: false
+        }
+      },
+      {
         test: /\.(jpg|JPG|jpe?g|png|gif|mp3|svg)$/i,
         use: {
           loader: 'file-loader'
@@ -86,6 +93,10 @@ const config = {
         {
           from: 'assets/images',
           to: 'assets/images'
+        },
+        {
+          from: 'public',
+          to: '[name][ext]'
         }
       ]
     }),
