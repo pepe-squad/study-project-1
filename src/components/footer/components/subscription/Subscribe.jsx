@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { StyledNavBar, StyledInput, StyledButton } from '_components/footer/footer-styled';
+
 const Subscribe = () => {
   const [name, setName] = useState('');
 
@@ -8,22 +10,22 @@ const Subscribe = () => {
     const cutValue = value.slice(0, 25);
     setName(cutValue);
   };
+
+  const onClickHandler = () => {
+    alert('You have been subscribed!');
+    setName('');
+  };
+
   return (
     <div>
       <form>
-        <label htmlFor="usermail-sub" className="pr-2">
-          Your email:
-        </label>
-        <input
-          id="usermail-sub"
-          placeholder="usermail@domain.com"
-          className="rounded-md shadow-md border text-black"
-          onChange={onChangeHandler}
-          value={name}
-        />
-        <button className="subscribeButton" type="button">
+        <StyledNavBar>Follow Us</StyledNavBar>
+
+        <label htmlFor="usermail-sub">Your email:</label>
+        <StyledInput id="usermail-sub" placeholder="usermail@domain.com" onChange={onChangeHandler} value={name} />
+        <StyledButton onClick={onClickHandler} type="button">
           Подписаться
-        </button>
+        </StyledButton>
       </form>
     </div>
   );
