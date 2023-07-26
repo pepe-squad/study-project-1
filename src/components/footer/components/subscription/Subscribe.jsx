@@ -20,7 +20,6 @@ const Subscribe = () => {
   };
 
   const onClickHandler = () => {
-    alert('You have been subscribed!');
     setName('');
   };
 
