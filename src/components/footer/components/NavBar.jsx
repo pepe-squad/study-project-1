@@ -1,32 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { StyledNavBar, DivForFooter, StyledList } from '../footer-styled';
+import { StyledNavBar, StyledList, StyledListElements, StyledH3 } from '../footer-styled';
 
 const NavBar = () => {
   return (
-    <div>
-      <StyledNavBar>Quick Links</StyledNavBar>
-      <DivForFooter>
-        <StyledList>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About Us</Link>
-          </li>
-          <li>
-            <Link to="/contacts">Our Services</Link>
-          </li>
-          <li>
-            <Link to="/contacts">Latest Blog</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact Us</Link>
-          </li>
-        </StyledList>
-      </DivForFooter>
-    </div>
+    <StyledNavBar>
+      <StyledH3>Quick Links</StyledH3>
+
+      <StyledList>
+        <StyledListElements>
+          <Link to="/">Home</Link>
+        </StyledListElements>
+        <StyledListElements>
+          <Link to="/about">About Us</Link>
+        </StyledListElements>
+        <StyledListElements>
+          <Link to="/contacts">Our Services</Link>
+        </StyledListElements>
+        <StyledListElements>
+          <Link to="/contacts">Latest Blog</Link>
+        </StyledListElements>
+        <StyledListElements>
+          <Link to="/contact">Contact Us</Link>
+        </StyledListElements>
+      </StyledList>
+    </StyledNavBar>
   );
 };
 
