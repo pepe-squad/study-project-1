@@ -84,11 +84,7 @@ export const ProfileLinksA = styled.a`
   padding-left: 0;
   padding-right: 0;
   text-align: center;
-  width: 36px;
-  height: 36px;
-  color: #ffffff;
   margin: 0.25rem;
-  background-color: #06a3da;
 `;
 
 export const ProfileNameDiv = styled.div`
