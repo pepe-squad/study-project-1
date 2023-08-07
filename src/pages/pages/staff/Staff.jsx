@@ -10,17 +10,13 @@ import {
   ProfileContainerDiv,
   ProfileImage,
   ProfileImageDiv,
-  ProfileLinksA,
-  ProfileLinksDiv,
   ProfileNameDiv,
   ProfileNameH4,
   ProfileSpec,
-  StaffGridDiv,
-  StyledInstaIcon,
-  StyledTiktokIcon,
-  StyledTwitterIcon,
-  StyledVkIcon
+  StaffGridDiv
 } from './styled-staff';
+import ProfileLinks from './components/profile-links/ProfileLinks';
+import TopDiv from './components/top-div/TopDiv';
 
 const Staff = () => {
   const docList = useStore(docListStore);
@@ -35,40 +31,30 @@ const Staff = () => {
       {isPending ? (
         <Spinner />
       ) : (
-        <BottomDiv>
-          <StaffGridDiv>
-            {docList.map((doc) => {
-              const fullName = `${doc.firstName} ${doc.lastName}`;
-              return (
-                <Link key={doc.id} to={`${doc.id}`}>
-                  <ProfileContainerDiv>
-                    <ProfileImageDiv>
-                      <ProfileImage src={doc.image} />
-                      <ProfileLinksDiv>
-                        <ProfileLinksA>
-                          <StyledTwitterIcon />
-                        </ProfileLinksA>
-                        <ProfileLinksA>
-                          <StyledInstaIcon />
-                        </ProfileLinksA>
-                        <ProfileLinksA>
-                          <StyledVkIcon />
-                        </ProfileLinksA>
-                        <ProfileLinksA>
-                          <StyledTiktokIcon />
-                        </ProfileLinksA>
-                      </ProfileLinksDiv>
-                    </ProfileImageDiv>
-                    <ProfileNameDiv>
-                      <ProfileNameH4>{fullName}</ProfileNameH4>
-                      <ProfileSpec>{doc.spec}</ProfileSpec>
-                    </ProfileNameDiv>
-                  </ProfileContainerDiv>
-                </Link>
-              );
-            })}
-          </StaffGridDiv>
-        </BottomDiv>
+        <div>
+          <TopDiv />
+          <BottomDiv>
+            <StaffGridDiv>
+              {docList.map((doc) => {
+                const fullName = `${doc.firstName} ${doc.lastName}`;
+                return (
+                  <Link key={doc.id} to={`${doc.id}`}>
+                    <ProfileContainerDiv>
+                      <ProfileImageDiv>
+                        <ProfileImage src={doc.image} />
+                        <ProfileLinks />
+                      </ProfileImageDiv>
+                      <ProfileNameDiv>
+                        <ProfileNameH4>{fullName}</ProfileNameH4>
+                        <ProfileSpec>{doc.spec}</ProfileSpec>
+                      </ProfileNameDiv>
+                    </ProfileContainerDiv>
+                  </Link>
+                );
+              })}
+            </StaffGridDiv>
+          </BottomDiv>
+        </div>
       )}
     </Layout>
   );

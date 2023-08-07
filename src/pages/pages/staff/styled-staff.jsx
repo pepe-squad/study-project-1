@@ -1,13 +1,11 @@
 import styled from 'styled-components';
-import { FaTwitter, FaInstagram, FaVk, FaTiktok } from 'react-icons/fa';
 
 export const CommonDiv = styled.div``;
-
-export const TopDiv = styled.div``;
 
 export const BottomDiv = styled.div`
   box-sizing: border-box;
   display: block;
+  padding-bottom: 10rem;
 `;
 
 export const StaffGridDiv = styled.div`
@@ -34,57 +32,6 @@ export const ProfileImage = styled.img`
   vertical-align: middle;
   overflow-clip-margin: content-box;
   overflow: clip;
-`;
-
-export const ProfileLinksDiv = styled.div`
-  background-color: #eef9ff;
-  z-index: 2;
-  display: flex;
-  padding: 0.5rem;
-  margin-left: 17%;
-  margin-top: -10%;
-  margin-bottom: -10%;
-  width: 65%;
-  box-sizing: border-box;
-`;
-
-export const StyledTwitterIcon = styled(FaTwitter)`
-  background-color: #06a3da;
-  color: white;
-  font-size: 24px;
-  width: 36px;
-  height: 36px;
-`;
-
-export const StyledInstaIcon = styled(FaInstagram)`
-  background-color: #06a3da;
-  color: white;
-  font-size: 24px;
-  width: 36px;
-  height: 36px;
-`;
-
-export const StyledVkIcon = styled(FaVk)`
-  background-color: #06a3da;
-  color: white;
-  font-size: 24px;
-  width: 36px;
-  height: 36px;
-`;
-
-export const StyledTiktokIcon = styled(FaTiktok)`
-  background-color: #06a3da;
-  color: white;
-  font-size: 24px;
-  width: 36px;
-  height: 36px;
-`;
-
-export const ProfileLinksA = styled.a`
-  padding-left: 0;
-  padding-right: 0;
-  text-align: center;
-  margin: 0.25rem;
 `;
 
 export const ProfileNameDiv = styled.div`
