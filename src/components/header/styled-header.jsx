@@ -26,7 +26,7 @@ export const StyledLogoTitle = styled.h1`
 
 export const StyledTopDiv = styled.div`
   display: flex;
-  flex-flow: row;
+  flex-direction: row;
   background-color: #eef9ff;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -38,10 +38,10 @@ export const StyledClockLogo = styled(FontAwesomeIcon)`
 `;
 
 export const StyledDateDiv = styled.div`
-  display: flex-wrap;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 5%;
+  padding-left: 2%;
   width: 70%;
   margin-bottom: 0;
   display: inline-flex;

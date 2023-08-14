@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { faTooth, faClock, faEnvelopeOpen, faPhone } from '@fortawesome/free-solid-svg-icons/index';
+import { faTooth, faClock, faEnvelopeOpen, faPhone, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons/index';
 
 import Appointment from './components/appointment/Appointment';
 import NavBar from './components/navbar/NavBar';
@@ -39,11 +39,13 @@ const Header = () => {
           <Link to="/">
             <StyledLogoTitle>
               <StyledLogo icon={faTooth} />
+              DentCare
             </StyledLogoTitle>
           </Link>
         </StyledLogoDiv>
         <StyledNavbar>
           <NavBar />
+          <StyledLogo icon={faMagnifyingGlass} />
           <Appointment />
         </StyledNavbar>
       </StyledHeader>
