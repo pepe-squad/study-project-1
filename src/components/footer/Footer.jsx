@@ -5,12 +5,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome/index';
 import Address from './components/address/Address';
 import NavBar from './components/navbar/NavBar';
 import Subscribe from './components/subscription/Subscribe';
-import { StyledFooter, FooterDiv, BottomDiv, TradeMark, DesignedBy } from './styled-footer';
-import ScrollUp from './components/scroll-to-top/styled-ScrollToTopButton';
+import { StyledFooter, FooterDiv, BottomDiv, TradeMark, DesignedBy, ScrollUp } from './styled-footer';
 import FollowLinks from './components/followlinks/FollowLinks';
-import ScrollToTopButton from './components/scroll-to-top/ScrollToTopButton';
 
 const Footer = () => {
+  const ScrollToTopButton = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
   return (
     <div>
       <Subscribe />
