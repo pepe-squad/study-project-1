@@ -9,7 +9,7 @@ import { StyledFooter, FooterDiv, BottomDiv, TradeMark, DesignedBy, ScrollUp } f
 import FollowLinks from './components/followlinks/FollowLinks';
 
 const Footer = () => {
-  const ScrollToTopButton = () => {
+  const ScrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -28,7 +28,7 @@ const Footer = () => {
       <BottomDiv>
         <TradeMark>© Children by Oris. All Right Reserved.</TradeMark>
         <DesignedBy>Designed by Kim.</DesignedBy>
-        <ScrollUp onClick={ScrollToTopButton}>
+        <ScrollUp onClick={ScrollToTop}>
           <FontAwesomeIcon icon={faCircleUp} />
         </ScrollUp>
       </BottomDiv>
