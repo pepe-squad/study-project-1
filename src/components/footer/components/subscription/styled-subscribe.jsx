@@ -10,7 +10,7 @@ export const StyledSubscribeDiv = styled.div`
 export const StyledSubscribeForm = styled.form`
   background-color: #06a3da;
   padding: 2rem;
-  margin: 0 20%;
+  margin: 0 30%;
 `;
 
 export const StyledInputGroup = styled.div`
