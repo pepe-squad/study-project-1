@@ -9,7 +9,7 @@ export const StyledSubscribeDiv = styled.div`
 
 export const StyledSubscribeForm = styled.form`
   background-color: #06a3da;
-  padding: 2rem;
+  padding: 1.5rem;
   margin: 0 30%;
 `;
 
