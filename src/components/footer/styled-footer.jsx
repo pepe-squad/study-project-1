@@ -18,7 +18,7 @@ export const FooterDiv = styled.div`
   line-height: 1.5;
 `;
 
-export const BottomDiv = styled.div`
+export const StyledBottomDiv = styled.div`
   display: flex;
   flex-flow: row;
   align-items: center;
