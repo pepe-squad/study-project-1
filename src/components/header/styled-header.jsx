@@ -28,8 +28,6 @@ export const StyledTopDiv = styled.div`
   display: flex;
   flex-direction: row;
   background-color: #eef9ff;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 `;
 
 export const StyledClockLogo = styled(FontAwesomeIcon)`
@@ -44,17 +42,19 @@ export const StyledDateDiv = styled.div`
   padding-left: 2%;
   width: 70%;
   margin-bottom: 0;
-  display: inline-flex;
 `;
 
 export const StyledContactsDiv = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 30%;
+  margin-left: 30%;
   padding-right: 3%;
   background-color: #06a3da;
   color: white;
   font-family: 'Open Sans', sans-serif;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 `;
 
 export const StyledMail = styled.p`
@@ -62,7 +62,9 @@ export const StyledMail = styled.p`
   padding-right: 1rem;
 `;
 
-export const StyledContactsLogo = styled(FontAwesomeIcon)``;
+export const StyledContactsLogo = styled(FontAwesomeIcon)`
+  padding-left: 0.5rem;
+`;
 
 export const StyledPhone = styled.div`
   padding-left: 0.5rem;

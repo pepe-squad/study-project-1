@@ -25,7 +25,7 @@ const Header = () => {
       <StyledTopDiv>
         <StyledDateDiv>
           <StyledClockLogo icon={faClock} />
-          Opening Hours: Mon - Tues : 6.00 am - 10.00 pm, Sunday Closed{' '}
+          <p>Opening Hours: Mon - Tues : 6.00 am - 10.00 pm, Sunday Closed</p>
         </StyledDateDiv>
         <StyledContactsDiv>
           <StyledContactsLogo icon={faEnvelopeOpen} />
