@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 
+import {
+  StyledButton,
+  StyledInput,
+  StyledInputGroup,
+  StyledLabel,
+  StyledSubscribeDiv,
+  StyledSubscribeForm
+} from './styled-subscribe';
+
 const Subscribe = () => {
   const [name, setName] = useState('');
 
@@ -9,23 +18,15 @@ const Subscribe = () => {
     setName(cutValue);
   };
   return (
-    <div>
-      <form>
-        <label htmlFor="usermail-sub" className="pr-2">
-          Your email:
-        </label>
-        <input
-          id="usermail-sub"
-          placeholder="usermail@domain.com"
-          className="rounded-md shadow-md border text-black"
-          onChange={onChangeHandler}
-          value={name}
-        />
-        <button className="subscribeButton" type="button">
-          Подписаться
-        </button>
-      </form>
-    </div>
+    <StyledSubscribeDiv>
+      <StyledSubscribeForm>
+        <StyledInputGroup>
+          <StyledLabel htmlFor="usermail-sub">Your email:</StyledLabel>
+          <StyledInput id="usermail-sub" placeholder="usermail@domain.com" onChange={onChangeHandler} value={name} />
+          <StyledButton type="button">Подписаться</StyledButton>
+        </StyledInputGroup>
+      </StyledSubscribeForm>
+    </StyledSubscribeDiv>
   );
 };
 

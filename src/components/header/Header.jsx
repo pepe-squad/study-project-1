@@ -1,22 +1,55 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { faTooth, faClock, faEnvelopeOpen, faPhone, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons/index';
 
-import Appointment from './Appointment';
-import Logo from './Logo';
-import NavBar from './NavBar';
+import Appointment from './components/appointment/Appointment';
+import NavBar from './components/navbar/NavBar';
+import {
+  StyledClockLogo,
+  StyledContactsDiv,
+  StyledContactsLogo,
+  StyledDateDiv,
+  StyledHeader,
+  StyledLogo,
+  StyledLogoDiv,
+  StyledLogoTitle,
+  StyledPhone,
+  StyledTopDiv,
+  StyledMail
+} from './styled-header';
+import { StyledNavbar } from './components/navbar/styled-navbar';
 
 const Header = () => {
   return (
-    <header className="bg-white sticky top-0 z-50  shadow-md mb-10">
-      <div className="font-semibold text-slate-200 bg-white flex flex-wrap justify-between  p-4">
-        <div className="flex justify-start">
-          <Logo />
-        </div>
-        <div className="flex justify-end">
+    <div>
+      <StyledTopDiv>
+        <StyledDateDiv>
+          <StyledClockLogo icon={faClock} />
+          <p>Opening Hours: Mon - Tues : 6.00 am - 10.00 pm, Sunday Closed</p>
+        </StyledDateDiv>
+        <StyledContactsDiv>
+          <StyledContactsLogo icon={faEnvelopeOpen} />
+          <StyledMail>gachi-squad@mail.ru</StyledMail>
+          <StyledContactsLogo icon={faPhone} />
+          <StyledPhone>+8 800 9379992</StyledPhone>
+        </StyledContactsDiv>
+      </StyledTopDiv>
+      <StyledHeader>
+        <StyledLogoDiv>
+          <Link to="/">
+            <StyledLogoTitle>
+              <StyledLogo icon={faTooth} />
+              DentCare
+            </StyledLogoTitle>
+          </Link>
+        </StyledLogoDiv>
+        <StyledNavbar>
           <NavBar />
+          <StyledLogo icon={faMagnifyingGlass} />
           <Appointment />
-        </div>
-      </div>
-    </header>
+        </StyledNavbar>
+      </StyledHeader>
+    </div>
   );
 };
 
